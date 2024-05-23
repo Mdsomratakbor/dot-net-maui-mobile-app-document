@@ -15,7 +15,7 @@ This guide provides step-by-step instructions to create a keystore, configure yo
     Re-enter new password: 
 
     What is your first and last name? 
-    [Unknown]: John Doe
+    [Unknown]: Md Samrat Akbor
 
     What is the name of your organizational unit? 
     [Unknown]: Development
@@ -24,15 +24,15 @@ This guide provides step-by-step instructions to create a keystore, configure yo
     [Unknown]: MyCompany
 
      What is the name of your city or locality? 
-     [Unknown]: New York
+     [Unknown]: Dhaka
 
       What is the name of your state or province? 
-     [Unknown]: NY
+     [Unknown]: Dhaka
 
      What is the two-letter country code for this unit? 
-     [Unknown]: US
+     [Unknown]: BD
 
-     Is CN=John Doe, OU=Development, O=MyCompany, L=New York, ST=NY, C=US correct? 
+     Is CN=Md Samrat Akbar, OU=Development, O=MyCompany, L=Dhaka, ST=Dhaka, C=BD correct? 
      [no]: yes
 	
      Enter key password for <mykey> (RETURN if same as keystore password): 
