@@ -10,32 +10,32 @@ This guide provides step-by-step instructions to create a keystore, configure yo
    ```sh
    keytool -genkey -v -keystore keystore-file-name -alias key -keyalg RSA -keysize 2048 -validity 10000
 3. **Enter the required details when prompted:**
-  ```sh
-	Enter keystore password: 
-	Re-enter new password: 
+   ```sh
+    Enter keystore password: 
+    Re-enter new password: 
 
-	What is your first and last name? 
-	[Unknown]: John Doe
+    What is your first and last name? 
+    [Unknown]: John Doe
 
-	What is the name of your organizational unit? 
-	[Unknown]: Development
+    What is the name of your organizational unit? 
+    [Unknown]: Development
 
-	What is the name of your organization? 
-	[Unknown]: MyCompany
+    What is the name of your organization? 
+    [Unknown]: MyCompany
 
-	What is the name of your city or locality? 
-	[Unknown]: New York
+     What is the name of your city or locality? 
+     [Unknown]: New York
 
-	What is the name of your state or province? 
-	[Unknown]: NY
+      What is the name of your state or province? 
+     [Unknown]: NY
 
-	What is the two-letter country code for this unit? 
-	[Unknown]: US
+     What is the two-letter country code for this unit? 
+     [Unknown]: US
 
-	Is CN=John Doe, OU=Development, O=MyCompany, L=New York, ST=NY, C=US correct? 
-	[no]: yes
+     Is CN=John Doe, OU=Development, O=MyCompany, L=New York, ST=NY, C=US correct? 
+     [no]: yes
 	
-	Enter key password for <mykey> (RETURN if same as keystore password): 
+     Enter key password for <mykey> (RETURN if same as keystore password): 
 
 ## Step 2: Configure the .NET MAUI Project
 
@@ -53,8 +53,19 @@ This guide provides step-by-step instructions to create a keystore, configure yo
   <AndroidSigningKeyPass></AndroidSigningKeyPass>
   <AndroidSigningStorePass></AndroidSigningStorePass>
 </PropertyGroup>
+```
 4. **Replace the placeholder values:**
+
 1. petadoption.app.keystore: The path to your keystore file.
 2. key: The alias for the key (as specified during the keystore creation).
 3. AndroidSigningKeyPass: The password for the key.
 4. AndroidSigningStorePass: The password for the keystone.
+### Step 3: Publish the Application
+1. Open a terminal or command prompt.
+2. Navigate to the root directory of your .NET MAUI project.
+3. Execute the following command to publish the application:
+ ```sh
+  dotnet publish -f:net6.0-android -c:Release /p:AndroidSigningKeyPass=password /p:AndroidSigningStorePass=password
+```
+1. Replace net6.0-android with your target framework version if different.
+2. Replace password with the actual passwords you set during keystore creation.
